@@ -1,0 +1,63 @@
+<div class="container mt-4 titu">
+    <div class="row">
+        <div class="col">
+            <h1>&nbsp;
+                
+                    <i class="fa-solid fa-user-plus"></i>&nbsp;
+                    Add Contact page
+            
+            </h1>
+
+            <p class="mt-3" style="text-align: justify;">
+                This is dummy data: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero est magnam, accusantium velit aspernatur nisi! Aut blanditiis neque optio quisquam dolore totam similique sequi! Pariatur in totam praesentium amet iusto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quos assumenda tempora. Doloremque repellendus in facere sed, maiores, nihil voluptates consequuntur obcaecati ea beatae odio dicta quasi sapiente delectus maxime?
+            </p>
+        </div>
+    </div>
+    {{contactName}}
+<div class="container  mt-5">
+    <div class="row">
+        <div class="col-md-8 border p-3">
+
+            <form action="">
+
+                <div class="mb-3">
+                    <input name="contactName" [(ngModel)]="contactName" type="text" placeholder="Name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="text" placeholder="Photourl" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="text" placeholder="Mobile Number" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="text" placeholder="Company" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <input type="text" placeholder="Title" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <select name="" id="" class="form-control">
+                    <option value="" selected hidden disabled>Select A Group</option>
+                    <option value="" *ngFor="let group of allGroups">{{group.name}}</option>
+                   
+                  </select>
+                </div>
+                <div class="mb-3">
+                    <input type="button" value="Create" class="btn btn-success">
+                    <a routerLink="/" class="btn btn-warning ms-3">Close</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+
+             <img src="data:image/png;base64,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" alt="no image" class="contactimage mt-3">
+
+        </div>
+    </div>
+</div>
+
+</div>

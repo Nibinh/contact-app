@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+.title{
+    font-family: 'Caveat', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.titu{
+    font-family: 'Roboto Slab', serif;
+}
+
+.contactimage{
+    width: 120px;
+    border-radius: 20px;
+}
