@@ -38,5 +38,10 @@ addContact(contactBody:any){
   return this.http.post(this.baseURl,contactBody)
 }
 
+deleteContact(contactId:any){
+  return this.http.delete('this.baseURl/${contactId}')
+}
+
 
 }
+
