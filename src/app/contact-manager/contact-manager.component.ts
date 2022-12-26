@@ -15,16 +15,31 @@ searchKey:string=''
   constructor(private api:ApiService){}
 
   ngOnInit(): void {
+    this.getAllcontact()    
+  }
 
-    this.api.getAllcontacts().subscribe((data:any)=>{
+  getAllcontact(){
+    this.api.getAllcontacts()
+    .subscribe((data:any)=>{
       this.allContacts=data
     })
-      
+
   }
+
+
   search(event:any){
     console.log(event.target.value)
      this.searchKey=event.target.value
 
   }
+
+  deleteContact(contactId:any){
+    this.api.deleteContact(contactId)
+    .subscribe((data:any)=>{
+      this.getAllcontact()
+
+    })
+  }
+
 
 }
