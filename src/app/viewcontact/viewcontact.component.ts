@@ -28,7 +28,7 @@ export class ViewcontactComponent implements OnInit{
    this.api.viewContact(this.contactId)
    .subscribe((data:any)=>{
     this.contact = data
-    this.groupId=data.groupId
+    this.groupId=data.group
     console.log(this.groupId)
 
     this.api.getGroupname(this.groupId)

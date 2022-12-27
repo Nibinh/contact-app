@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 export class AddcontactComponent implements OnInit{
 
   allGroups:any[]=[]
-  contactName:any=""
+  
   contact:MyContact={} as MyContact
 
 
